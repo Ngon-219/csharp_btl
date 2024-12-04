@@ -13,7 +13,11 @@ namespace WinFormDemo
 {
     public partial class Login : Form
     {
+<<<<<<< HEAD
         private Dbcontext db = new Dbcontext();
+=======
+        private databasemainDataContext db = new databasemainDataContext("Data Source=localhost\\SQLEXPRESS;Initial Catalog=csharp_winfrom;Integrated Security=True;TrustServerCertificate=True");
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
         public Login()
         {
             InitializeComponent();
@@ -67,10 +71,13 @@ namespace WinFormDemo
                 MessageBox.Show("Login Failed");
             }
         }
+<<<<<<< HEAD
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
     }
 }

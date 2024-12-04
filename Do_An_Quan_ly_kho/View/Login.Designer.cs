@@ -153,7 +153,10 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(326, 35);
             this.txtUsername.TabIndex = 4;
+<<<<<<< HEAD
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+=======
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // 
             // txtPassword
             // 

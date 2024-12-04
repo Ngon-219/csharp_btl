@@ -38,9 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxName = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchByName = new System.Windows.Forms.TextBox();
             this.txtSearchById = new System.Windows.Forms.TextBox();
+=======
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.checkBoxId = new System.Windows.Forms.CheckBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,9 +52,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+=======
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearchByName = new System.Windows.Forms.TextBox();
+            this.txtSearchById = new System.Windows.Forms.TextBox();
+            this.btnRefesh = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -155,6 +168,7 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm Kiếm";
             // 
+<<<<<<< HEAD
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,6 +202,8 @@
             this.txtSearchById.TabIndex = 31;
             this.txtSearchById.TextChanged += new System.EventHandler(this.txtSearchById_TextChanged);
             // 
+=======
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // checkBoxId
             // 
             this.checkBoxId.AutoSize = true;
@@ -266,6 +282,10 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.txtCustomerAddress);
+<<<<<<< HEAD
+=======
+            this.groupBox1.Controls.Add(this.btnAdd);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtCustomerPhone);
             this.groupBox1.Controls.Add(this.label4);
@@ -284,13 +304,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Khách Hàng";
             // 
+<<<<<<< HEAD
+=======
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(478, 60);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(142, 51);
+            this.btnSearch.TabIndex = 33;
+            this.btnSearch.Text = "    Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtSearchByName
+            // 
+            this.txtSearchByName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchByName.Location = new System.Drawing.Point(195, 89);
+            this.txtSearchByName.Multiline = true;
+            this.txtSearchByName.Name = "txtSearchByName";
+            this.txtSearchByName.Size = new System.Drawing.Size(251, 35);
+            this.txtSearchByName.TabIndex = 32;
+            this.txtSearchByName.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
+            // 
+            // txtSearchById
+            // 
+            this.txtSearchById.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchById.Location = new System.Drawing.Point(195, 38);
+            this.txtSearchById.Multiline = true;
+            this.txtSearchById.Name = "txtSearchById";
+            this.txtSearchById.Size = new System.Drawing.Size(251, 35);
+            this.txtSearchById.TabIndex = 31;
+            this.txtSearchById.TextChanged += new System.EventHandler(this.txtSearchById_TextChanged);
+            // 
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // btnRefesh
             // 
             this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefesh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnRefesh.Location = new System.Drawing.Point(152, 457);
+=======
+            this.btnRefesh.Location = new System.Drawing.Point(152, 511);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(135, 48);
             this.btnRefesh.TabIndex = 37;
@@ -304,7 +364,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnDelete.Location = new System.Drawing.Point(152, 518);
+=======
+            this.btnDelete.Location = new System.Drawing.Point(318, 511);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 48);
             this.btnDelete.TabIndex = 36;
@@ -326,6 +390,23 @@
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
+=======
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(152, 457);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(135, 48);
+            this.btnAdd.TabIndex = 34;
+            this.btnAdd.Text = "   Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,5 +454,9 @@
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btnAdd;
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
     }
 }

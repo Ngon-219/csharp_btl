@@ -39,6 +39,10 @@
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.btnAdd = new System.Windows.Forms.Button();
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -50,12 +54,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.cbTypeOfCategory = new System.Windows.Forms.ComboBox();
             this.txtCategoryId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+=======
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCategoryId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbTypeOfCategory = new System.Windows.Forms.ComboBox();
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -152,7 +165,11 @@
             this.btnRefesh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnRefesh.Location = new System.Drawing.Point(152, 495);
+=======
+            this.btnRefesh.Location = new System.Drawing.Point(152, 549);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(135, 48);
             this.btnRefesh.TabIndex = 15;
@@ -166,7 +183,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnDelete.Location = new System.Drawing.Point(318, 495);
+=======
+            this.btnDelete.Location = new System.Drawing.Point(318, 549);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 48);
             this.btnDelete.TabIndex = 14;
@@ -180,7 +201,11 @@
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnEdit.Location = new System.Drawing.Point(152, 559);
+=======
+            this.btnEdit.Location = new System.Drawing.Point(318, 495);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(106, 48);
             this.btnEdit.TabIndex = 13;
@@ -188,6 +213,24 @@
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
+=======
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(152, 495);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(135, 48);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "   Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -296,6 +339,10 @@
             this.groupBox1.Controls.Add(this.btnRefesh);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnEdit);
+<<<<<<< HEAD
+=======
+            this.groupBox1.Controls.Add(this.btnAdd);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -315,6 +362,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
             // 
+<<<<<<< HEAD
             // cbTypeOfCategory
             // 
             this.cbTypeOfCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,6 +391,8 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Mã Hàng Hóa *";
             // 
+=======
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // cbCategory
             // 
             this.cbCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,6 +421,37 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Ghi Chú";
             // 
+<<<<<<< HEAD
+=======
+            // txtCategoryId
+            // 
+            this.txtCategoryId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoryId.Location = new System.Drawing.Point(152, 206);
+            this.txtCategoryId.Multiline = true;
+            this.txtCategoryId.Name = "txtCategoryId";
+            this.txtCategoryId.Size = new System.Drawing.Size(272, 32);
+            this.txtCategoryId.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 21);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Mã Hàng Hóa *";
+            // 
+            // cbTypeOfCategory
+            // 
+            this.cbTypeOfCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTypeOfCategory.FormattingEnabled = true;
+            this.cbTypeOfCategory.Location = new System.Drawing.Point(152, 247);
+            this.cbTypeOfCategory.Name = "cbTypeOfCategory";
+            this.cbTypeOfCategory.Size = new System.Drawing.Size(272, 29);
+            this.cbTypeOfCategory.TabIndex = 21;
+            // 
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // FormHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,6 +484,10 @@
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btnAdd;
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;

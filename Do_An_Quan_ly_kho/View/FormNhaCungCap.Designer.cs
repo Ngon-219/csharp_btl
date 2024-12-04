@@ -41,6 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.btnAdd = new System.Windows.Forms.Button();
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,6 +75,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.label2);
+<<<<<<< HEAD
+=======
+            this.groupBox1.Controls.Add(this.btnAdd);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
@@ -134,7 +142,11 @@
             this.btnRefesh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnRefesh.Location = new System.Drawing.Point(157, 468);
+=======
+            this.btnRefesh.Location = new System.Drawing.Point(157, 522);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(133, 48);
             this.btnRefesh.TabIndex = 40;
@@ -157,7 +169,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnDelete.Location = new System.Drawing.Point(330, 468);
+=======
+            this.btnDelete.Location = new System.Drawing.Point(330, 522);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 48);
             this.btnDelete.TabIndex = 39;
@@ -181,7 +197,11 @@
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnEdit.Location = new System.Drawing.Point(157, 522);
+=======
+            this.btnEdit.Location = new System.Drawing.Point(330, 468);
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 48);
             this.btnEdit.TabIndex = 38;
@@ -199,6 +219,24 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Mã nhà cung cấp *";
             // 
+<<<<<<< HEAD
+=======
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(157, 468);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(133, 48);
+            this.btnAdd.TabIndex = 37;
+            this.btnAdd.Text = "   Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
             // label3
             // 
             this.label3.AutoSize = true;
@@ -354,6 +392,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label label2;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btnAdd;
+>>>>>>> 69b4c01ca11b58957ae9bd899b1d1053c6a850f6
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
