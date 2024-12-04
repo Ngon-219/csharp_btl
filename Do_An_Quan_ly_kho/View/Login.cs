@@ -67,5 +67,10 @@ namespace WinFormDemo
                 MessageBox.Show("Login Failed");
             }
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
