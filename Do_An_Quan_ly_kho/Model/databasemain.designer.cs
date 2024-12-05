@@ -22,7 +22,7 @@ namespace Do_An_Quan_ly_kho.Model
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Quan_Ly_Nha_Kho")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="csharp_winfrom")]
 	public partial class databasemainDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -54,7 +54,7 @@ namespace Do_An_Quan_ly_kho.Model
     #endregion
 		
 		public databasemainDataContext() : 
-				base(global::Do_An_Quan_ly_kho.Properties.Settings.Default.Quan_Ly_Nha_KhoConnectionString, mappingSource)
+				base(global::Do_An_Quan_ly_kho.Properties.Settings.Default.csharp_winfromConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -188,7 +188,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDanhMuc", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDanhMuc", DbType="NVarChar(255)")]
 		public string TenDanhMuc
 		{
 			get
@@ -310,7 +310,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhachHang", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhachHang", DbType="NVarChar(255)")]
 		public string TenKhachHang
 		{
 			get
@@ -483,7 +483,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDangNhap", DbType="NVarChar(50)")]
 		public string TenDangNhap
 		{
 			get
@@ -503,7 +503,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(255)")]
 		public string MatKhau
 		{
 			get
@@ -523,7 +523,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="NVarChar(15)")]
 		public string SoDienThoai
 		{
 			get
@@ -543,7 +543,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(255)")]
 		public string DiaChi
 		{
 			get
@@ -563,7 +563,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(255)")]
 		public string HoTen
 		{
 			get
@@ -710,7 +710,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNhaCungCap", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNhaCungCap", DbType="NVarChar(255)")]
 		public string TenNhaCungCap
 		{
 			get
@@ -824,7 +824,7 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		private int _MaPhieuBan;
 		
-		private System.DateTime _NgayBan;
+		private System.Nullable<System.DateTime> _NgayBan;
 		
 		private System.Nullable<decimal> _TongTien;
 		
@@ -832,13 +832,9 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		private System.Nullable<int> _MaNguoiDung;
 		
-		private System.Nullable<int> _MaSanPham;
-		
 		private EntityRef<KhachHang> _KhachHang;
 		
 		private EntityRef<NguoiDung> _NguoiDung;
-		
-		private EntityRef<SanPham> _SanPham;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -846,7 +842,7 @@ namespace Do_An_Quan_ly_kho.Model
     partial void OnCreated();
     partial void OnMaPhieuBanChanging(int value);
     partial void OnMaPhieuBanChanged();
-    partial void OnNgayBanChanging(System.DateTime value);
+    partial void OnNgayBanChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayBanChanged();
     partial void OnTongTienChanging(System.Nullable<decimal> value);
     partial void OnTongTienChanged();
@@ -854,15 +850,12 @@ namespace Do_An_Quan_ly_kho.Model
     partial void OnMaKhachHangChanged();
     partial void OnMaNguoiDungChanging(System.Nullable<int> value);
     partial void OnMaNguoiDungChanged();
-    partial void OnMaSanPhamChanging(System.Nullable<int> value);
-    partial void OnMaSanPhamChanged();
     #endregion
 		
 		public PhieuBanHang()
 		{
 			this._KhachHang = default(EntityRef<KhachHang>);
 			this._NguoiDung = default(EntityRef<NguoiDung>);
-			this._SanPham = default(EntityRef<SanPham>);
 			OnCreated();
 		}
 		
@@ -886,8 +879,8 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayBan", DbType="Date NOT NULL")]
-		public System.DateTime NgayBan
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayBan", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayBan
 		{
 			get
 			{
@@ -974,30 +967,6 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSanPham", DbType="Int")]
-		public System.Nullable<int> MaSanPham
-		{
-			get
-			{
-				return this._MaSanPham;
-			}
-			set
-			{
-				if ((this._MaSanPham != value))
-				{
-					if (this._SanPham.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaSanPhamChanging(value);
-					this.SendPropertyChanging();
-					this._MaSanPham = value;
-					this.SendPropertyChanged("MaSanPham");
-					this.OnMaSanPhamChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhachHang_PhieuBanHang", Storage="_KhachHang", ThisKey="MaKhachHang", OtherKey="MaKhachHang", IsForeignKey=true)]
 		public KhachHang KhachHang
 		{
@@ -1066,40 +1035,6 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_PhieuBanHang", Storage="_SanPham", ThisKey="MaSanPham", OtherKey="MaSanPham", IsForeignKey=true)]
-		public SanPham SanPham
-		{
-			get
-			{
-				return this._SanPham.Entity;
-			}
-			set
-			{
-				SanPham previousValue = this._SanPham.Entity;
-				if (((previousValue != value) 
-							|| (this._SanPham.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SanPham.Entity = null;
-						previousValue.PhieuBanHangs.Remove(this);
-					}
-					this._SanPham.Entity = value;
-					if ((value != null))
-					{
-						value.PhieuBanHangs.Add(this);
-						this._MaSanPham = value.MaSanPham;
-					}
-					else
-					{
-						this._MaSanPham = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("SanPham");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1129,7 +1064,7 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		private string _MaPhieuNhap;
 		
-		private System.DateTime _NgayNhap;
+		private System.Nullable<System.DateTime> _NgayNhap;
 		
 		private System.Nullable<int> _MaNhaCungCap;
 		
@@ -1137,13 +1072,9 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		private System.Nullable<int> _MaNguoiDung;
 		
-		private System.Nullable<int> _MaSanPham;
-		
 		private EntityRef<NguoiDung> _NguoiDung;
 		
 		private EntityRef<NhaCungCap> _NhaCungCap;
-		
-		private EntityRef<SanPham> _SanPham;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1151,7 +1082,7 @@ namespace Do_An_Quan_ly_kho.Model
     partial void OnCreated();
     partial void OnMaPhieuNhapChanging(string value);
     partial void OnMaPhieuNhapChanged();
-    partial void OnNgayNhapChanging(System.DateTime value);
+    partial void OnNgayNhapChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayNhapChanged();
     partial void OnMaNhaCungCapChanging(System.Nullable<int> value);
     partial void OnMaNhaCungCapChanged();
@@ -1159,15 +1090,12 @@ namespace Do_An_Quan_ly_kho.Model
     partial void OnTongTienChanged();
     partial void OnMaNguoiDungChanging(System.Nullable<int> value);
     partial void OnMaNguoiDungChanged();
-    partial void OnMaSanPhamChanging(System.Nullable<int> value);
-    partial void OnMaSanPhamChanged();
     #endregion
 		
 		public PhieuNhapHang()
 		{
 			this._NguoiDung = default(EntityRef<NguoiDung>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
-			this._SanPham = default(EntityRef<SanPham>);
 			OnCreated();
 		}
 		
@@ -1191,8 +1119,8 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="Date NOT NULL")]
-		public System.DateTime NgayNhap
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayNhap
 		{
 			get
 			{
@@ -1279,30 +1207,6 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSanPham", DbType="Int")]
-		public System.Nullable<int> MaSanPham
-		{
-			get
-			{
-				return this._MaSanPham;
-			}
-			set
-			{
-				if ((this._MaSanPham != value))
-				{
-					if (this._SanPham.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaSanPhamChanging(value);
-					this.SendPropertyChanging();
-					this._MaSanPham = value;
-					this.SendPropertyChanged("MaSanPham");
-					this.OnMaSanPhamChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_PhieuNhapHang", Storage="_NguoiDung", ThisKey="MaNguoiDung", OtherKey="MaNguoiDung", IsForeignKey=true)]
 		public NguoiDung NguoiDung
 		{
@@ -1371,40 +1275,6 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_PhieuNhapHang", Storage="_SanPham", ThisKey="MaSanPham", OtherKey="MaSanPham", IsForeignKey=true)]
-		public SanPham SanPham
-		{
-			get
-			{
-				return this._SanPham.Entity;
-			}
-			set
-			{
-				SanPham previousValue = this._SanPham.Entity;
-				if (((previousValue != value) 
-							|| (this._SanPham.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SanPham.Entity = null;
-						previousValue.PhieuNhapHangs.Remove(this);
-					}
-					this._SanPham.Entity = value;
-					if ((value != null))
-					{
-						value.PhieuNhapHangs.Add(this);
-						this._MaSanPham = value.MaSanPham;
-					}
-					else
-					{
-						this._MaSanPham = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("SanPham");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1444,10 +1314,6 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		private System.Nullable<int> _SoLuongTon;
 		
-		private EntitySet<PhieuBanHang> _PhieuBanHangs;
-		
-		private EntitySet<PhieuNhapHang> _PhieuNhapHangs;
-		
 		private EntityRef<DanhMucSanPham> _DanhMucSanPham;
 		
     #region Extensibility Method Definitions
@@ -1470,8 +1336,6 @@ namespace Do_An_Quan_ly_kho.Model
 		
 		public SanPham()
 		{
-			this._PhieuBanHangs = new EntitySet<PhieuBanHang>(new Action<PhieuBanHang>(this.attach_PhieuBanHangs), new Action<PhieuBanHang>(this.detach_PhieuBanHangs));
-			this._PhieuNhapHangs = new EntitySet<PhieuNhapHang>(new Action<PhieuNhapHang>(this.attach_PhieuNhapHangs), new Action<PhieuNhapHang>(this.detach_PhieuNhapHangs));
 			this._DanhMucSanPham = default(EntityRef<DanhMucSanPham>);
 			OnCreated();
 		}
@@ -1496,7 +1360,7 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSanPham", DbType="NVarChar(255)")]
 		public string TenSanPham
 		{
 			get
@@ -1600,32 +1464,6 @@ namespace Do_An_Quan_ly_kho.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_PhieuBanHang", Storage="_PhieuBanHangs", ThisKey="MaSanPham", OtherKey="MaSanPham")]
-		public EntitySet<PhieuBanHang> PhieuBanHangs
-		{
-			get
-			{
-				return this._PhieuBanHangs;
-			}
-			set
-			{
-				this._PhieuBanHangs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanPham_PhieuNhapHang", Storage="_PhieuNhapHangs", ThisKey="MaSanPham", OtherKey="MaSanPham")]
-		public EntitySet<PhieuNhapHang> PhieuNhapHangs
-		{
-			get
-			{
-				return this._PhieuNhapHangs;
-			}
-			set
-			{
-				this._PhieuNhapHangs.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DanhMucSanPham_SanPham", Storage="_DanhMucSanPham", ThisKey="MaDanhMuc", OtherKey="MaDanhMuc", IsForeignKey=true)]
 		public DanhMucSanPham DanhMucSanPham
 		{
@@ -1678,30 +1516,6 @@ namespace Do_An_Quan_ly_kho.Model
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_PhieuBanHangs(PhieuBanHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = this;
-		}
-		
-		private void detach_PhieuBanHangs(PhieuBanHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = null;
-		}
-		
-		private void attach_PhieuNhapHangs(PhieuNhapHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = this;
-		}
-		
-		private void detach_PhieuNhapHangs(PhieuNhapHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanPham = null;
 		}
 	}
 }
