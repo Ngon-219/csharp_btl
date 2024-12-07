@@ -36,11 +36,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.checkBoxName = new System.Windows.Forms.CheckBox();
-            this.txtUserNote = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUserAddress = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtUserNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +49,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -95,11 +99,15 @@
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUser.Location = new System.Drawing.Point(441, 160);
+            this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 24;
-            this.dgvUser.Size = new System.Drawing.Size(661, 418);
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUser.Size = new System.Drawing.Size(661, 493);
             this.dgvUser.TabIndex = 5;
+            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
+            this.dgvUser.Click += new System.EventHandler(this.dgvUser_Click);
             // 
             // groupBox2
             // 
@@ -143,14 +151,14 @@
             this.checkBoxName.Text = "Tìm kiếm theo tên";
             this.checkBoxName.UseVisualStyleBackColor = true;
             // 
-            // txtUserNote
+            // txtUserNumber
             // 
-            this.txtUserNote.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNote.Location = new System.Drawing.Point(152, 396);
-            this.txtUserNote.Multiline = true;
-            this.txtUserNote.Name = "txtUserNote";
-            this.txtUserNote.Size = new System.Drawing.Size(272, 32);
-            this.txtUserNote.TabIndex = 11;
+            this.txtUserNumber.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserNumber.Location = new System.Drawing.Point(152, 396);
+            this.txtUserNumber.Multiline = true;
+            this.txtUserNumber.Name = "txtUserNumber";
+            this.txtUserNumber.Size = new System.Drawing.Size(272, 32);
+            this.txtUserNumber.TabIndex = 5;
             // 
             // label6
             // 
@@ -158,18 +166,18 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 402);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 21);
+            this.label6.Size = new System.Drawing.Size(112, 21);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Ghi chú";
+            this.label6.Text = "Số điện thoại ";
             // 
-            // txtUserAddress
+            // txtMatKhau
             // 
-            this.txtUserAddress.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserAddress.Location = new System.Drawing.Point(152, 358);
-            this.txtUserAddress.Multiline = true;
-            this.txtUserAddress.Name = "txtUserAddress";
-            this.txtUserAddress.Size = new System.Drawing.Size(272, 32);
-            this.txtUserAddress.TabIndex = 9;
+            this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(152, 358);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(272, 32);
+            this.txtMatKhau.TabIndex = 4;
             // 
             // label5
             // 
@@ -177,18 +185,18 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 364);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 21);
+            this.label5.Size = new System.Drawing.Size(94, 21);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Địa chỉ *";
+            this.label5.Text = "Mật Khẩu *";
             // 
-            // txtUserNumber
+            // txtTaiKhoan
             // 
-            this.txtUserNumber.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNumber.Location = new System.Drawing.Point(152, 320);
-            this.txtUserNumber.Multiline = true;
-            this.txtUserNumber.Name = "txtUserNumber";
-            this.txtUserNumber.Size = new System.Drawing.Size(272, 32);
-            this.txtUserNumber.TabIndex = 7;
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(152, 320);
+            this.txtTaiKhoan.Multiline = true;
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(272, 32);
+            this.txtTaiKhoan.TabIndex = 3;
             // 
             // label4
             // 
@@ -196,9 +204,9 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 326);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 21);
+            this.label4.Size = new System.Drawing.Size(131, 21);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Số điện thoại *";
+            this.label4.Text = "Tên Tài Khoản *";
             // 
             // txtUsername
             // 
@@ -207,7 +215,7 @@
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(272, 32);
-            this.txtUsername.TabIndex = 5;
+            this.txtUsername.TabIndex = 2;
             // 
             // label3
             // 
@@ -226,7 +234,7 @@
             this.txtUserId.Multiline = true;
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(272, 32);
-            this.txtUserId.TabIndex = 3;
+            this.txtUserId.TabIndex = 1;
             // 
             // label2
             // 
@@ -259,15 +267,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNote);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtAddress);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnRefesh);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.txtUserNote);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtUserAddress);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtUserNumber);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtMatKhau);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtTaiKhoan);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label3);
@@ -279,10 +291,48 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(441, 578);
+            this.groupBox1.Size = new System.Drawing.Size(441, 653);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // txtNote
+            // 
+            this.txtNote.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(152, 472);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(272, 32);
+            this.txtNote.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 478);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 21);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Ghi chú";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(152, 434);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(272, 32);
+            this.txtAddress.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 440);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 21);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Địa chỉ ";
             // 
             // btnRefesh
             // 
@@ -290,10 +340,10 @@
             this.btnRefesh.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefesh.Location = new System.Drawing.Point(152, 521);
+            this.btnRefesh.Location = new System.Drawing.Point(152, 595);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(132, 48);
-            this.btnRefesh.TabIndex = 19;
+            this.btnRefesh.TabIndex = 10;
             this.btnRefesh.Text = " Làm mới";
             this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
@@ -304,13 +354,14 @@
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(325, 521);
+            this.btnDelete.Location = new System.Drawing.Point(325, 595);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 48);
-            this.btnDelete.TabIndex = 18;
+            this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "     Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -318,13 +369,14 @@
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(325, 467);
+            this.btnEdit.Location = new System.Drawing.Point(325, 541);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 48);
-            this.btnEdit.TabIndex = 17;
+            this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "   Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -332,10 +384,10 @@
             this.btnAdd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(152, 467);
+            this.btnAdd.Location = new System.Drawing.Point(152, 541);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(132, 48);
-            this.btnAdd.TabIndex = 16;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "   Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -346,7 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1102, 578);
+            this.ClientSize = new System.Drawing.Size(1102, 653);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -371,11 +423,11 @@
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBoxName;
-        private System.Windows.Forms.TextBox txtUserNote;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUserAddress;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtUserNumber;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;
@@ -389,5 +441,9 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label8;
     }
 }

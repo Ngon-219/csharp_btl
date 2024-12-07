@@ -13,7 +13,7 @@ namespace WinFormDemo
 {
     public partial class Login : Form
     {
-        private databasemainDataContext db = new databasemainDataContext("Data Source=localhost\\SQLEXPRESS;Initial Catalog=csharp_winfrom;Integrated Security=True;TrustServerCertificate=True");
+        private DatabaseDataContext db = new DatabaseDataContext();
         public Login()
         {
             InitializeComponent();
@@ -53,19 +53,28 @@ namespace WinFormDemo
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(txtUsername.Text);
-            Console.WriteLine(txtPassword.Text);
-            var users = db.NguoiDungs.FirstOrDefault(x => x.TenDangNhap == txtUsername.Text && x.MatKhau == txtPassword.Text);
-            if (users != null )
+            string name = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password)) 
             {
-                frmMain dashboard = new frmMain();
-                dashboard.Show();
-                this.Hide();
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin ", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Login Failed");
+                var user = db.NguoiDungs.FirstOrDefault(x => x.TenDangNhap == name && x.MatKhau == password);
+                if (user != null)
+                {
+                    MessageBox.Show("Đăng nhập thành công", "Success Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmMain dashboard = new frmMain();
+                    dashboard.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+           
         }
     }
 }

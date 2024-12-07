@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Do_An_Quan_ly_kho.View.PhieuNhap;
 using Do_An_Quan_ly_kho.View.PhieuXuat;
+using WinFormDemo;
 namespace Do_An_Quan_ly_kho
 {
     public partial class frmMain : Form
@@ -58,6 +59,13 @@ namespace Do_An_Quan_ly_kho
         {
             frmLoaiHangHoa frm = new frmLoaiHangHoa();
             frm.Show();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

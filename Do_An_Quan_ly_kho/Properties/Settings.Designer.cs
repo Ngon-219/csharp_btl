@@ -44,5 +44,16 @@ namespace Do_An_Quan_ly_kho.Properties {
                 return ((string)(this["Quan_Ly_Nha_KhoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DUNG\\XUANDUNG;Initial Catalog=ahihi;Integrated Security=True;TrustSer" +
+            "verCertificate=True")]
+        public string ahihiConnectionString {
+            get {
+                return ((string)(this["ahihiConnectionString"]));
+            }
+        }
     }
 }
