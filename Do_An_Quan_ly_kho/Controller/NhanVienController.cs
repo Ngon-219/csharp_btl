@@ -175,5 +175,53 @@ namespace Do_An_Quan_ly_kho.Controller
             }
             return rs;
         }
+        public FunctResult<List<NguoiDung>> Search(string key, bool theoMa, bool theoTen)
+        {
+            FunctResult<List<NguoiDung>> rs = new FunctResult<List<NguoiDung>>();
+
+            try
+            {
+                if (string.IsNullOrEmpty(key))
+                {
+                    rs.Data = db.NguoiDungs.ToList();
+                    rs.ErrCode = EnumErrCode.InvalidInput;
+                    rs.ErrDesc = "Lấy toàn bộ dữ liệu";
+                    return rs;
+                }
+                List<NguoiDung> result = new List<NguoiDung>();
+
+                if (theoMa)
+                {
+                    result = db.NguoiDungs
+                        .Where(x => x.MaNguoiDung.ToString().Contains(key))
+                        .ToList();
+
+                }else if (theoTen)
+                {
+                    result = db.NguoiDungs
+                        .Where(x => x.HoTen.ToString().Contains(key))
+                        .ToList();
+                }
+
+                if (result.Any())
+                {
+                    rs.Data = result;
+                    rs.ErrCode = EnumErrCode.Success;
+                    rs.ErrDesc = "Tìm kiếm kết quả thành công";
+                }
+                else
+                {
+                    rs.Data = null;
+                    rs.ErrCode = EnumErrCode.Error;
+                    rs.ErrDesc = "Không tìm thấy kết quả";
+                }
+            }catch (Exception ex)
+            {
+                rs.ErrCode = EnumErrCode.Error;
+                rs.ErrDesc = "Có lỗi xảy ra trong quá trình tìm kiếm: " + ex.Message;
+                rs.Data = null;
+            }
+            return rs;
+        }
     }
 }

@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
-            this.txtSearchByName = new System.Windows.Forms.TextBox();
-            this.txtSearchById = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBoxId = new System.Windows.Forms.CheckBox();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -63,23 +62,14 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtSearchByName
+            // txtSearch
             // 
-            this.txtSearchByName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchByName.Location = new System.Drawing.Point(195, 89);
-            this.txtSearchByName.Multiline = true;
-            this.txtSearchByName.Name = "txtSearchByName";
-            this.txtSearchByName.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchByName.TabIndex = 3;
-            // 
-            // txtSearchById
-            // 
-            this.txtSearchById.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchById.Location = new System.Drawing.Point(195, 38);
-            this.txtSearchById.Multiline = true;
-            this.txtSearchById.Name = "txtSearchById";
-            this.txtSearchById.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchById.TabIndex = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(14, 48);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(443, 35);
+            this.txtSearch.TabIndex = 1;
             // 
             // checkBoxId
             // 
@@ -87,40 +77,41 @@
             this.checkBoxId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxId.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxId.Location = new System.Drawing.Point(14, 47);
+            this.checkBoxId.Location = new System.Drawing.Point(256, 89);
             this.checkBoxId.Name = "checkBoxId";
             this.checkBoxId.Size = new System.Drawing.Size(175, 26);
             this.checkBoxId.TabIndex = 0;
             this.checkBoxId.Text = "Tìm kiếm theo mã";
             this.checkBoxId.UseVisualStyleBackColor = true;
+            this.checkBoxId.CheckedChanged += new System.EventHandler(this.checkBoxId_CheckedChanged);
             // 
             // dgvUser
             // 
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUser.Location = new System.Drawing.Point(441, 160);
+            this.dgvUser.Location = new System.Drawing.Point(441, 154);
             this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 24;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(661, 493);
+            this.dgvUser.Size = new System.Drawing.Size(661, 499);
             this.dgvUser.TabIndex = 5;
             this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
+            this.dgvUser.SelectionChanged += new System.EventHandler(this.dgvUser_SelectionChanged);
             this.dgvUser.Click += new System.EventHandler(this.dgvUser_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnSearch);
-            this.groupBox2.Controls.Add(this.txtSearchByName);
             this.groupBox2.Controls.Add(this.checkBoxName);
-            this.groupBox2.Controls.Add(this.txtSearchById);
+            this.groupBox2.Controls.Add(this.txtSearch);
             this.groupBox2.Controls.Add(this.checkBoxId);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(441, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(661, 160);
+            this.groupBox2.Size = new System.Drawing.Size(661, 154);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm Nhân Viên";
@@ -130,13 +121,14 @@
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(494, 58);
+            this.btnSearch.Location = new System.Drawing.Point(497, 58);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(142, 51);
             this.btnSearch.TabIndex = 30;
             this.btnSearch.Text = "    Tìm kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // checkBoxName
             // 
@@ -144,12 +136,13 @@
             this.checkBoxName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxName.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxName.Location = new System.Drawing.Point(14, 98);
+            this.checkBoxName.Location = new System.Drawing.Point(55, 89);
             this.checkBoxName.Name = "checkBoxName";
             this.checkBoxName.Size = new System.Drawing.Size(176, 26);
             this.checkBoxName.TabIndex = 2;
             this.checkBoxName.Text = "Tìm kiếm theo tên";
             this.checkBoxName.UseVisualStyleBackColor = true;
+            this.checkBoxName.CheckedChanged += new System.EventHandler(this.checkBoxName_CheckedChanged);
             // 
             // txtUserNumber
             // 
@@ -347,10 +340,12 @@
             this.btnRefesh.Text = " Làm mới";
             this.btnRefesh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,6 +361,7 @@
             // btnEdit
             // 
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.Enabled = false;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -417,8 +413,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSearchByName;
-        private System.Windows.Forms.TextBox txtSearchById;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.CheckBox checkBoxId;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.GroupBox groupBox2;

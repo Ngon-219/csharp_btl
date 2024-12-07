@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHangHoa));
-            this.txtSearchByName = new System.Windows.Forms.TextBox();
-            this.txtSearchById = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBoxId = new System.Windows.Forms.CheckBox();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,35 +50,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbTypeOfCategory = new System.Windows.Forms.ComboBox();
+            this.txtCategoryId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCategoryId = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbTypeOfCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtSearchByName
+            // txtSearch
             // 
-            this.txtSearchByName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchByName.Location = new System.Drawing.Point(195, 89);
-            this.txtSearchByName.Multiline = true;
-            this.txtSearchByName.Name = "txtSearchByName";
-            this.txtSearchByName.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchByName.TabIndex = 3;
-            // 
-            // txtSearchById
-            // 
-            this.txtSearchById.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchById.Location = new System.Drawing.Point(195, 38);
-            this.txtSearchById.Multiline = true;
-            this.txtSearchById.Name = "txtSearchById";
-            this.txtSearchById.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchById.TabIndex = 1;
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(14, 57);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(445, 35);
+            this.txtSearch.TabIndex = 1;
             // 
             // checkBoxId
             // 
@@ -87,7 +77,7 @@
             this.checkBoxId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxId.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxId.Location = new System.Drawing.Point(14, 47);
+            this.checkBoxId.Location = new System.Drawing.Point(244, 98);
             this.checkBoxId.Name = "checkBoxId";
             this.checkBoxId.Size = new System.Drawing.Size(175, 26);
             this.checkBoxId.TabIndex = 0;
@@ -108,9 +98,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnSearch);
-            this.groupBox2.Controls.Add(this.txtSearchByName);
             this.groupBox2.Controls.Add(this.checkBoxName);
-            this.groupBox2.Controls.Add(this.txtSearchById);
+            this.groupBox2.Controls.Add(this.txtSearch);
             this.groupBox2.Controls.Add(this.checkBoxId);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,7 +129,7 @@
             this.checkBoxName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxName.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxName.Location = new System.Drawing.Point(14, 98);
+            this.checkBoxName.Location = new System.Drawing.Point(62, 98);
             this.checkBoxName.Name = "checkBoxName";
             this.checkBoxName.Size = new System.Drawing.Size(176, 26);
             this.checkBoxName.TabIndex = 2;
@@ -332,6 +321,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
             // 
+            // cbTypeOfCategory
+            // 
+            this.cbTypeOfCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTypeOfCategory.FormattingEnabled = true;
+            this.cbTypeOfCategory.Location = new System.Drawing.Point(152, 247);
+            this.cbTypeOfCategory.Name = "cbTypeOfCategory";
+            this.cbTypeOfCategory.Size = new System.Drawing.Size(272, 29);
+            this.cbTypeOfCategory.TabIndex = 21;
+            // 
+            // txtCategoryId
+            // 
+            this.txtCategoryId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoryId.Location = new System.Drawing.Point(152, 206);
+            this.txtCategoryId.Multiline = true;
+            this.txtCategoryId.Name = "txtCategoryId";
+            this.txtCategoryId.Size = new System.Drawing.Size(272, 32);
+            this.txtCategoryId.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 21);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Mã Hàng Hóa *";
+            // 
             // cbCategory
             // 
             this.cbCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,34 +377,6 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Ghi Chú";
             // 
-            // txtCategoryId
-            // 
-            this.txtCategoryId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoryId.Location = new System.Drawing.Point(152, 206);
-            this.txtCategoryId.Multiline = true;
-            this.txtCategoryId.Name = "txtCategoryId";
-            this.txtCategoryId.Size = new System.Drawing.Size(272, 32);
-            this.txtCategoryId.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 212);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 21);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Mã Hàng Hóa *";
-            // 
-            // cbTypeOfCategory
-            // 
-            this.cbTypeOfCategory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTypeOfCategory.FormattingEnabled = true;
-            this.cbTypeOfCategory.Location = new System.Drawing.Point(152, 247);
-            this.cbTypeOfCategory.Name = "cbTypeOfCategory";
-            this.cbTypeOfCategory.Size = new System.Drawing.Size(272, 29);
-            this.cbTypeOfCategory.TabIndex = 21;
-            // 
             // FormHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -411,8 +400,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSearchByName;
-        private System.Windows.Forms.TextBox txtSearchById;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.CheckBox checkBoxId;
         private System.Windows.Forms.DataGridView dgvCategory;
         private System.Windows.Forms.GroupBox groupBox2;

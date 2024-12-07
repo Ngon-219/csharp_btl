@@ -34,6 +34,7 @@ namespace Do_An_Quan_ly_kho
         NhanVienController nv = new NhanVienController();
         private void FormNhanVien_Load(object sender, EventArgs e)
         {
+            
             var rs = nv.GetAll();
             switch (rs.ErrCode)
             {
@@ -47,6 +48,13 @@ namespace Do_An_Quan_ly_kho
                     dgvUser.DataSource = rs.Data;
                     break;
             }
+
+            dgvUser.ClearSelection();
+
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
+
+            dgvUser.SelectionChanged += dgvUser_SelectionChanged;
 
             dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvUser.ReadOnly = true;
@@ -92,7 +100,7 @@ namespace Do_An_Quan_ly_kho
 
         private void dgvUser_Click(object sender, EventArgs e)
         {
-            if (dgvUser.SelectedRows.Count > 0)
+             if (dgvUser.SelectedRows.Count > 0)
             {
                 var selectRow = dgvUser.SelectedRows[0];
                 txtUserId.Text = selectRow.Cells[0].Value.ToString();
@@ -171,6 +179,75 @@ namespace Do_An_Quan_ly_kho
                     break;
             }
             clearInput();
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            FormNhanVien_Load(sender, e);
+            clearInput();
+        }
+
+        private void checkBoxId_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxId.Checked) {
+                checkBoxName.Checked = false;
+            }
+        }
+
+        private void checkBoxName_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxName.Checked)
+            {
+                checkBoxId.Checked = false;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string key = txtSearch.Text;
+            bool theoMa = checkBoxId.Checked;
+            bool theoTen = checkBoxName.Checked;
+
+            if (!theoMa && !theoTen) {
+                MessageBox.Show("Vui lòng chọn tiêu chí tìm kiếm", "Thông báo lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var rs = nv.Search(key, theoMa, theoTen);
+
+            switch (rs.ErrCode)
+            {
+                case Model.EnumErrCode.Success:
+                    MessageBox.Show(rs.ErrDesc, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvUser.DataSource = rs.Data;
+                    break;
+                case Model.EnumErrCode.InvalidInput:
+                    MessageBox.Show(rs.ErrDesc, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvUser.DataSource = rs.Data;
+                    break;
+                case Model.EnumErrCode.Empty:
+                    MessageBox.Show(rs.ErrDesc, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case Model.EnumErrCode.Error:
+                    MessageBox.Show(rs.ErrDesc, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+
+            txtSearch.Text = "";
+        }
+
+        private void dgvUser_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvUser.SelectedRows.Count == 0) {
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+            }
         }
     }
 }

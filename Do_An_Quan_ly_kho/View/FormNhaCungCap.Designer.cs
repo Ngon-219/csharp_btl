@@ -49,8 +49,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.checkBoxName = new System.Windows.Forms.CheckBox();
-            this.txtSearchByName = new System.Windows.Forms.TextBox();
-            this.txtSearchById = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.checkBoxId = new System.Windows.Forms.CheckBox();
             this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -260,8 +259,7 @@
             // 
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.checkBoxName);
-            this.groupBox2.Controls.Add(this.txtSearchByName);
-            this.groupBox2.Controls.Add(this.txtSearchById);
+            this.groupBox2.Controls.Add(this.txtSearch);
             this.groupBox2.Controls.Add(this.checkBoxId);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(449, 12);
@@ -290,30 +288,21 @@
             this.checkBoxName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxName.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxName.Location = new System.Drawing.Point(47, 90);
+            this.checkBoxName.Location = new System.Drawing.Point(66, 90);
             this.checkBoxName.Name = "checkBoxName";
             this.checkBoxName.Size = new System.Drawing.Size(176, 26);
             this.checkBoxName.TabIndex = 24;
             this.checkBoxName.Text = "Tìm kiếm theo tên";
             this.checkBoxName.UseVisualStyleBackColor = true;
             // 
-            // txtSearchByName
+            // txtSearch
             // 
-            this.txtSearchByName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchByName.Location = new System.Drawing.Point(228, 81);
-            this.txtSearchByName.Multiline = true;
-            this.txtSearchByName.Name = "txtSearchByName";
-            this.txtSearchByName.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchByName.TabIndex = 27;
-            // 
-            // txtSearchById
-            // 
-            this.txtSearchById.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchById.Location = new System.Drawing.Point(228, 30);
-            this.txtSearchById.Multiline = true;
-            this.txtSearchById.Name = "txtSearchById";
-            this.txtSearchById.Size = new System.Drawing.Size(251, 35);
-            this.txtSearchById.TabIndex = 22;
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(22, 49);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(442, 35);
+            this.txtSearch.TabIndex = 22;
             // 
             // checkBoxId
             // 
@@ -321,7 +310,7 @@
             this.checkBoxId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.checkBoxId.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxId.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxId.Location = new System.Drawing.Point(47, 39);
+            this.checkBoxId.Location = new System.Drawing.Point(261, 90);
             this.checkBoxId.Name = "checkBoxId";
             this.checkBoxId.Size = new System.Drawing.Size(175, 26);
             this.checkBoxId.TabIndex = 21;
@@ -378,8 +367,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.CheckBox checkBoxName;
-        private System.Windows.Forms.TextBox txtSearchByName;
-        private System.Windows.Forms.TextBox txtSearchById;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.CheckBox checkBoxId;
         private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.TextBox txtSupplierNote;
